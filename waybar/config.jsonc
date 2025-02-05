@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "spacing": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-top": 7,
+    "margin-bottom": 0,
+    "height": 40,
+
+    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["group/tray", "pulseaudio", "clock"],
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "DP-2": [1, 2, 3, 4, 5],
+            "DP-3": [1, 2, 3, 4, 5]
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "ignore-workspaces": ["^100$"]
+    },
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{status_icon} {title} - {artist}",
+        "player-icons": {
+            "spotify": "󰓇"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "max-length": 50,
+        "ignored-players": ["firefox"],
+        "interval": 1
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 25,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "󰈹 $1",
+            "(.*) - Discord": "  $1",
+            "Steam": "󰓓 steam",
+            "Jellyfin Media Player": "󰏩 puppyfin",
+            "Lutris": "󰊗 lutris",
+            "Volume Control": "volume control"
+        }
+    },
+    "custom/menu": {
+        "tooltip": false,
+        "format": " ",
+        //"rotate": 90
+    },
+    "tray": {
+        "icon-size": 16,
+        "rotate": 0,
+        "spacing": 3
+    },
+    "group/tray": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 600,
+            "children-class": "expand-tray",
+            "transition-to-left": true,
+            "click-to-reveal": false
+        },
+        "modules": ["custom/menu", "tray"]
+    },
+    "clock": {
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "timezone": "America/Denver",
+        "format": "{:%I:%M} ",
+        "calendar": {
+            "format": {
+                "today": "<span color='#f5c2e7'><b>{}</b></span>"
+            }
+        }
+    },
+    "pulseaudio": {
+        "tooltip": false,
+        "format": "{icon} {volume:2}%",
+        "format-muted": "󰝟 0%",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 5
+    }
+}

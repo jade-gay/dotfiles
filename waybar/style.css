@@ -1,0 +1,72 @@
+#waybar {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  font-family: "Monaspace Neon", monospace;
+  border-radius: 10px;
+  border-bottom: 2px solid #f5c2e7;
+}
+
+tooltip {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border-radius: 6px;
+    border: none;
+    border-bottom: 2px solid #f5c2e7;
+}
+
+#workspaces{
+    color: #585b70;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 9px;
+    transition: 0.2s ease;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+}
+
+#workspaces button {
+    background: rgba(23, 23, 23, 0.0);
+    color: #cdd6f4;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 9px;
+    transition: 0.2s ease;
+    padding-left: 4px;
+    padding-right: 4px;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.empty {
+    color: #6c7086;   
+}
+
+#workspaces button.active {
+    color: #f5c2e7;   
+    transition: all 0.3s ease;
+    padding-left: 4px;
+    padding-right: 4px;
+    transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: none;
+    opacity: 0.75;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#window {
+    color: #cdd6f4;
+    padding-top: 1px;
+}
+
+#clock{
+    color: #cdd6f4;
+    padding-top: 3px;
+}
+
+#pulseaudio{
+    color: #cdd6f4;
+    padding-top: 1px;
+}
