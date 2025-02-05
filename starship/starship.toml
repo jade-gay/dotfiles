@@ -2,7 +2,7 @@
 palette = "catppuccin_mocha"
 
 [directory]
-disabled = true
+disabled = false
 read_only_style = "pink bold"
 style = "pink bold"
 read_only = " 󰌾 "
