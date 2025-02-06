@@ -14,7 +14,7 @@ tooltip {
     border-bottom: 2px solid #f5c2e7;
 }
 
-#workspaces{
+#workspaces {
     color: #585b70;
     box-shadow: none;
     text-shadow: none;
@@ -61,12 +61,21 @@ tooltip {
     padding-top: 1px;
 }
 
-#clock{
-    color: #cdd6f4;
-    padding-top: 3px;
-}
-
-#pulseaudio{
+#clock {
     color: #cdd6f4;
     padding-top: 1px;
+}
+
+#pulseaudio {
+    color: #cdd6f4;
+    padding-top: 1px;
+}
+
+#custom-menu{
+	padding-top: 1px;
+}
+
+#mpris {
+	color: #cdd6f4;
+	padding-top: 1px;
 }
